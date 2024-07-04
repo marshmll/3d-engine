@@ -1,11 +1,14 @@
 #pragma once
 
 #include "State.h"
+#include "Triangle.h"
 
 class GameState : public State
 {
 private:
     /* ATTRIBUTES */
+
+    Triangle *tri;
 
     /* INITIALIZERS */
 
