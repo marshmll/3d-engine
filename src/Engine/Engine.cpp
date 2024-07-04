@@ -5,8 +5,11 @@
 
 void Engine::initAttributes()
 {
-
+    window = nullptr;
     vm = sf::VideoMode(900, 600);
+
+    dtTimer.restart();
+    dt = 0.f;
 }
 
 void Engine::initWindow()
@@ -54,6 +57,7 @@ void Engine::run()
 
 void Engine::update()
 {
+    updateDt();
     pollEvents();
 
     if (!states.empty())
@@ -76,6 +80,11 @@ void Engine::render()
     }
 
     window->display();
+}
+
+void Engine::updateDt()
+{
+    dt = dtTimer.restart().asSeconds();
 }
 
 void Engine::pollEvents()

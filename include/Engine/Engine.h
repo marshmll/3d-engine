@@ -13,6 +13,7 @@ private:
 
     std::stack<State *> states;
 
+    sf::Clock dtTimer;
     float dt; // Time elapsed to render a frame.
 
     /* INITIALIZERS */
@@ -37,6 +38,8 @@ public:
     void update();
 
     void render();
+
+    void updateDt();
 
     void pollEvents();
 
