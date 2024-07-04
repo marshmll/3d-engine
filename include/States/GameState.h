@@ -2,6 +2,7 @@
 
 #include "State.h"
 #include "Triangle.h"
+#include "Matrices.h"
 
 class GameState : public State
 {
@@ -9,6 +10,8 @@ private:
     /* ATTRIBUTES */
 
     Triangle *tri;
+
+    std::vector<std::vector<float>> projectionMatrix;
 
     /* INITIALIZERS */
 

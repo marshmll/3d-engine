@@ -8,11 +8,7 @@
 GameState::GameState()
     : State()
 {
-    tri = new Triangle(100.f, 100.f, 0.f,
-                       100.f, 50.f, 0.f,
-                       150.f, 50.f, 0.f,
-                       true, true,
-                       sf::Color::White, sf::Color::Red);
+    projectionMatrix = createProjectionMatrix(900.f / 600.f, 90.f, 0.1f, 1000.f);
 }
 
 GameState::~GameState()

@@ -18,6 +18,7 @@ target_compile_features(3DENGINE PRIVATE cxx_std_17)
 
 target_include_directories(3DENGINE PRIVATE include)
 target_include_directories(3DENGINE PRIVATE include/Engine)
+target_include_directories(3DENGINE PRIVATE include/Matrices)
 target_include_directories(3DENGINE PRIVATE include/Shapes)
 target_include_directories(3DENGINE PRIVATE include/States)
 
